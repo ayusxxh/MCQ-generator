@@ -27,7 +27,7 @@ with st.form("user inputs"):
     
     if button and uploaded_file is not None and mcq_count and subject and tone:
         with st.spinner("LOADING..."):
-        try:
+            try:
             text= read_file(uploaded_file)
             with get_openai_callback() as cb:
                 response= generate_evaluate_chain(
